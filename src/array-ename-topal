@@ -1,0 +1,62 @@
+// 1. Array
+
+// Definition: An Array stores multiple values in a single variable. In TypeScript, you can specify the type of values an array can contain.
+
+// Number Array
+let numbers: number[] = [10, 20, 30];
+
+// String Array
+let names: string[] = ["Rahul", "Amit", "Sandip"];
+
+// Union Type Array
+let data: (string | number)[] = [10, "Hello", 20];
+
+console.log(numbers);
+console.log(names);
+console.log(data);
+
+
+
+// 2. Enum (Enumeration)
+// Definition: An Enum defines a set of named constants, making related values easier to understand and maintain.
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+let move: Direction = Direction.Up;
+
+console.log(move); // 0
+console.log(Direction.Right); // 3
+
+
+
+enum Status {
+  Pending = "PENDING",
+  Success = "SUCCESS",
+  Error = "ERROR"
+}
+
+let currentStatus: Status = Status.Success;
+
+console.log(currentStatus); // SUCCESS
+
+
+// 3. Tuple
+// Definition: A Tuple is an array type that specifies the expected type and position of each element.
+
+let user: [string, number, boolean] = [
+  "Sandip",
+  32,
+  true
+];
+
+console.log(user[0]); // Sandip
+console.log(user[1]); // 32
+console.log(user[2]); // true
+
+let locationa: readonly [number, number] = [12.8, 16.2]
+let locationaa: readonly [lat: number, long:number] = [12.8, 16.2]
